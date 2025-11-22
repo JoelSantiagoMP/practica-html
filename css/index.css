@@ -1,0 +1,33 @@
+/* Color general del body de la página */
+body {
+    background-color: #e8f1ff;
+}
+
+/* Estilo del header */
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+}
+
+header nav {
+    text-align: right;
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+.hero {
+    background-color: #0d47a1;
+}
