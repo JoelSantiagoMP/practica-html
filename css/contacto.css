@@ -31,19 +31,28 @@ header h1 {
     font-weight: bold;
 }
 
-.nav-links a {
+header h1 .logo {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+header nav a {
     text-decoration: none;
     color: white;
     background-color: #2563eb;
     padding: 8px 14px;
-    margin-left: 10px;
     border-radius: 6px;
     transition: 0.2s;
     font-weight: bold;
 }
 
-.nav-links a:hover,
-.nav-links .active {
+header nav a:hover {
     background-color: #1d4ed8;
 }
 
@@ -163,15 +172,14 @@ form select:focus {
 }
 
 .redes a {
-    display: inline-block;
-    margin-right: 10px;
-    color: #2563eb;
-    font-weight: bold;
+    color: #93c5fd;
+    margin: 0 10px;
     text-decoration: none;
+    transition: 0.2s;
 }
 
 .redes a:hover {
-    color: #1d4ed8;
+    color: white;
 }
 
 /* -----------------------------------------------------------
@@ -196,12 +204,16 @@ form select:focus {
 /* -----------------------------------------------------------
    FOOTER
 ----------------------------------------------------------- */
-footer {
+.footer {
     background-color: #111827;
     color: white;
-    text-align: center;
     padding: 25px;
+    text-align: center;
     margin-top: 80px;
+}
+
+.footer-texto p {
+    margin-bottom: 10px;
 }
 
 /* -----------------------------------------------------------

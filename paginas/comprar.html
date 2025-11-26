@@ -44,7 +44,57 @@
     </footer>
 
     <script src="../js/comprar.js"></script>
-
+    <!-- Modal de formulario de compra -->
+<div id="modal-compra" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar-modal">&times;</span>
+        
+        <h2>Completar compra</h2>
+        
+        <!-- Resumen del producto -->
+        <div class="resumen-producto">
+            <img id="modal-img-producto" src="" alt="Producto">
+            <div>
+                <h3 id="modal-nombre-producto"></h3>
+                <p class="modal-precio" id="modal-precio-producto"></p>
+            </div>
+        </div>
+        
+        <!-- Formulario -->
+        <form id="formulario-compra">
+            <div class="grupo-formulario">
+                <label for="nombre-cliente">Nombre completo *</label>
+                <input type="text" id="nombre-cliente" required>
+            </div>
+            
+            <div class="grupo-formulario">
+                <label for="email-cliente">Correo electrónico *</label>
+                <input type="email" id="email-cliente" required>
+            </div>
+            
+            <div class="grupo-formulario">
+                <label for="telefono-cliente">Teléfono *</label>
+                <input type="tel" id="telefono-cliente" required>
+            </div>
+            
+            <div class="grupo-formulario">
+                <label for="direccion-cliente">Dirección de envío *</label>
+                <textarea id="direccion-cliente" rows="3" required></textarea>
+            </div>
+            
+            <div class="grupo-formulario">
+                <label for="metodo-pago">Método de pago *</label>
+                <select id="metodo-pago" required>
+                    <option value="">Selecciona un método</option>
+                    <option value="tarjeta">Tarjeta de crédito/débito</option>
+                    <option value="contra-entrega">Pago contra entrega</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn-confirmar">Confirmar compra</button>
+        </form>
+    </div>
+</div>
 </body>
 
 </html>

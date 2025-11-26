@@ -228,3 +228,142 @@ body {
         font-size: 1rem;
     }
 }
+
+/* -----------------------------------------------------------
+   MODAL DE COMPRA
+----------------------------------------------------------- */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    overflow: auto;
+}
+
+.modal-contenido {
+    background-color: white;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.cerrar-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cerrar-modal:hover {
+    color: #111827;
+}
+
+.modal-contenido h2 {
+    color: #111827;
+    margin-bottom: 20px;
+    border-left: 6px solid #2563eb;
+    padding-left: 10px;
+}
+
+.resumen-producto {
+    display: flex;
+    gap: 15px;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.resumen-producto img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.resumen-producto h3 {
+    font-size: 1.1rem;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.modal-precio {
+    font-size: 1.5rem;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.grupo-formulario {
+    margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #111827;
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea,
+.grupo-formulario select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f8fafc;
+    transition: 0.2s;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus,
+.grupo-formulario select:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: white;
+}
+
+.btn-confirmar {
+    width: 100%;
+    padding: 14px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 10px;
+}
+
+.btn-confirmar:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .modal-contenido {
+        margin: 20px auto;
+        padding: 20px;
+    }
+    
+    .resumen-producto {
+        flex-direction: column;
+    }
+}

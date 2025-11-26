@@ -1,0 +1,7 @@
+Flask
+Flask-CORS
+SQLAlchemy
+Flask-JWT-Extended
+pyjwt
+pymssql       # sólo si usarás MS SQL Server con el driver pymssql
+# alternativo para MSSQL con pyodbc: pyodbc

@@ -82,3 +82,62 @@ if (!producto) {
     document.getElementById("precio").textContent = "$" + producto.precio;
     document.getElementById("descripcion").textContent = producto.descripcion;
 }
+// ============================================
+// FUNCIONALIDAD DEL MODAL DE COMPRA
+// ============================================
+
+// Solo ejecutar si el producto existe
+if (producto) {
+    // Obtener elementos del DOM
+    const modal = document.getElementById('modal-compra');
+    const btnComprar = document.querySelector('.btn-comprar');
+    const cerrarModal = document.querySelector('.cerrar-modal');
+    const formularioCompra = document.getElementById('formulario-compra');
+
+    // Verificar que todos los elementos existan
+    if (modal && btnComprar && cerrarModal && formularioCompra) {
+        // Función para abrir el modal
+        function abrirModal() {
+            // Llenar el resumen del producto en el modal
+            document.getElementById('modal-img-producto').src = producto.img;
+            document.getElementById('modal-nombre-producto').textContent = producto.nombre;
+            document.getElementById('modal-precio-producto').textContent = '$' + producto.precio;
+            
+            // Mostrar el modal
+            modal.style.display = 'block';
+        }
+
+        // Función para cerrar el modal
+        function cerrarModalFuncion() {
+            modal.style.display = 'none';
+        }
+
+        // Event listeners
+        btnComprar.addEventListener('click', abrirModal);
+        cerrarModal.addEventListener('click', cerrarModalFuncion);
+
+        // Cerrar modal al hacer clic fuera de él
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                cerrarModalFuncion();
+            }
+        });
+
+        // Manejar envío del formulario
+        formularioCompra.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar que se recargue la página
+            
+            // Aquí irá la lógica para enviar los datos al backend
+            // Por ahora solo mostraremos un mensaje
+            alert('¡Compra registrada! (Por ahora es solo una simulación)');
+            
+            // Cerrar el modal
+            cerrarModalFuncion();
+            
+            // Limpiar el formulario
+            formularioCompra.reset();
+        });
+    } else {
+        console.error('Error: No se encontraron algunos elementos del modal');
+    }
+}
