@@ -3,68 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Contacto - Patitas Felices</title>
     <link rel="stylesheet" href="../css/contacto.css">
-    <meta name="description" content="Fox Tienda Deportiva: ropa deportiva, zapatos, camisetas y más. Calidad y buenos precios.">
 </head>
 
 <body>
+
     <!-- HEADER -->
     <header>
-        <h1>Contáctanos</h1>
         <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./catalogo.html">Catálogo</a></li>
-                <li><a href="./comprar.html">Comprar</a></li>
-            </ul>
+            <h1>Patitas Felices</h1>
+            <div class="nav-links">
+                <a href="../index.html">Inicio</a>
+                <a href="../paginas/catalogo.html">Catálogo</a>
+            </div>
         </nav>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="contenedor">
-        <h2>¿Tienes dudas? Estamos para ayudarte</h2>
-        <p class="descripcion">
-            Completa el formulario y un asesor te responderá tan pronto como sea posible.
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="contenedor-contacto">
+
+        <h2>Contáctanos</h2>
+        <p class="intro">
+            ¿Tienes preguntas, dudas o deseas apoyar a la fundación?  
+            Usa el formulario y te responderemos lo antes posible.
         </p>
 
-        <!-- FORMULARIO -->
-        <form action="#" method="POST" class="formulario-contacto">
-            <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" required>
+        <div class="grid-contacto">
 
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" required>
+            <!-- FORMULARIO -->
+            <section class="form-card">
+                <h3>Envíanos un mensaje</h3>
 
-            <label for="telefono">Teléfono (opcional)</label>
-            <input type="tel" id="telefono" name="telefono">
+                <form>
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" required>
 
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" required>
 
-            <button type="submit" class="btn-enviar">Enviar mensaje</button>
-        </form>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" rows="4" required></textarea>
 
-        <!-- INFORMACIÓN EXTRA -->
-        <section class="info-contacto">
-            <h3>Información adicional</h3>
-            <p><strong>Email:</strong> soporte@foxdeportes.com</p>
-            <p><strong>Teléfono:</strong> +57 300 000 0000</p>
-            <p><strong>Horario:</strong> Lunes a Viernes — 8:00am a 6:00pm</p>
+                    <button class="btn-finalizar" type="submit">Enviar mensaje</button>
+                </form>
+            </section>
+
+            <!-- INFORMACIÓN Y REDES -->
+            <aside class="info-card">
+                <h3>Información de contacto</h3>
+                <p><strong>Correo:</strong> contacto@patitasfelices.org</p>
+                <p><strong>Teléfono:</strong> +57 320 123 4567</p>
+                <p><strong>Dirección:</strong> Bogotá, Colombia</p>
+
+                <h4>Síguenos</h4>
+                <div class="redes">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- MAPA -->
+        <section class="mapa">
+            <h3>Nuestra ubicación</h3>
+            <iframe  
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8220414972264!2d-74.08174942510834!3d4.648283542137957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99b3ddcfa1ff%3A0x35c4007cb59d4c09!2sBogot%C3%A1!5e0!3m2!1ses!2sco!4v1700000000000" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
         </section>
+
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-texto">
-            <p>© 2025 Fox Deportes — Todos los derechos reservados.</p>
-            <p>Ropa deportiva de calidad al mejor precio.</p>
-        </div>
-        <div class="redes">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">TikTok</a>
-        </div>
+    <footer>
+        <p>© 2025 Patitas Felices. Todos los derechos reservados.</p>
     </footer>
 
 </body>

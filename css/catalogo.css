@@ -214,3 +214,17 @@ header nav a {
 .redes a:hover {
     color: white;
 }
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}

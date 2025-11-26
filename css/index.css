@@ -234,3 +234,16 @@ header nav a:hover {
         height: 240px;
     }
 }
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
